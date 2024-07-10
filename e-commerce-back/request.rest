@@ -1,0 +1,39 @@
+// Criação
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{
+    "title": "Camiseta Liam",
+	"description": "Camisa de algodão",
+	"image_url": "/src/assets/imgs/1.jpg",
+	"tamanho": "32",
+	"category": "Calça",
+    "valor": 2333333
+}
+
+// Leitura all
+###
+GET http://localhost:3000/api/services
+
+// Leitura por id
+###
+GET http://localhost:3000/api/services/668f0483abf8473bbaac322a
+
+// Delete por id
+###
+DELETE http://localhost:3000/api/services/668f0483abf8473bb3ac322a
+
+
+// Atualizar por id
+###
+PUT http://localhost:3000/api/services/668f0499abf8473bb3ac322c
+Content-Type: application/json
+
+{
+    "title": "Camiseta Liamssssssssssssssssssssss",
+	"description": "Camisa de algodão",
+	"image_url": "/src/assets/imgs/1.jpg",
+	"tamanho": "32",
+	"category": "Calça",
+    "valor": 2333333
+}

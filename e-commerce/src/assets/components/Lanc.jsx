@@ -6,7 +6,7 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  padding: 20px;
+  padding: 0px 30px;
   max-width: 1920px;
   margin: 0 auto;
 
@@ -70,7 +70,7 @@ const App = () => {
   useEffect(() => {
     const fetchRoupas = async () => {
       try {
-        const response = await axios.get('http://localhost:3000');
+        const response = await axios.get('https://apie-commerce-damniels-projects.vercel.app/');
         setRoupas(response.data);
       } catch (error) {
         console.error('Error fetching roupas:', error);
