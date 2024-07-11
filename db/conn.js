@@ -1,17 +1,15 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 async function main() {
     try {
-mongoose.set('strictQuery', true);
+        mongoose.set('strictQuery', true);
 
-        await mongoose.connect(
-            'mongodb+srv://danielguilhermetb:VRR4WL32Z34vDnPu@ecommerce.vd1dy59.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=ecommerce'
-        );
-    console.log('Conectado ao banco!')
+        await mongoose.connect(process.env.DB_CONNECTION_STRING);
+        console.log('Conectado ao banco!');
     } catch (error) {
-        console.log(`erro: ${error}`)
+        console.log(`Erro: ${error}`);
     }
 }
-
 
 module.exports = main;
