@@ -5,11 +5,11 @@ const path = require('path');
 const serviceController = {
     create: async (req, res) => {
         try {
-            const { title, description, tamanho, category, valor } = req.body;
+            const { title, description, tamanho, category, novo, launch, kit, sexo, valor } = req.body;
             const image_path = req.file ? req.file.path : ''; // Caminho da imagem, se enviada
 
             // Verifica a presença dos campos obrigatórios
-            if (!title || !description || !tamanho || !category || !valor) {
+            if (!title || !description || !tamanho || !category || !novo || !launch || !kit || !sexo || !valor) {
                 return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
             }
 
@@ -19,6 +19,10 @@ const serviceController = {
                 image_path,
                 tamanho,
                 category,
+                novo,
+                launch,
+                kit,
+                sexo,
                 valor
             };
 
@@ -79,11 +83,11 @@ const serviceController = {
         try {
             const id = req.params.id;
 
-            const { title, description, tamanho, category, valor } = req.body;
+            const { title, description, tamanho, category, novo, launch, kit, sexo, valor } = req.body;
             const image_path = req.file ? req.file.path : ''; // Caminho da imagem, se enviada
 
             // Verifica a presença dos campos obrigatórios
-            if (!title || !description || !tamanho || !category || !valor) {
+            if (!title || !description || !tamanho || !category || !novo || !launch || !kit || !sexo || !valor) {
                 return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
             }
 
@@ -93,6 +97,10 @@ const serviceController = {
                 image_path,
                 tamanho,
                 category,
+                novo,
+                launch,
+                kit,
+                sexo,
                 valor
             };
 
