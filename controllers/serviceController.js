@@ -5,11 +5,11 @@ const path = require('path');
 const serviceController = {
     create: async (req, res) => {
         try {
-            const { title, description, tamanho, category, novo, launch, kit, sexo, valor } = req.body;
+            const { title, description, tamanho, category, novo, launch, kit, modelo, tipo, valor } = req.body;
             const image_path = req.file ? req.file.path : ''; // Caminho da imagem, se enviada
 
             // Verifica a presença dos campos obrigatórios
-            if (!title || !description || !tamanho || !category || !novo || !launch || !kit || !sexo || !valor) {
+            if (!title || !description || !tamanho || !category || !novo || !launch || !kit || !modelo || !tipo || !valor) {
                 return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
             }
 
@@ -22,7 +22,8 @@ const serviceController = {
                 novo,
                 launch,
                 kit,
-                sexo,
+                modelo,
+                tipo,
                 valor
             };
 
@@ -83,11 +84,11 @@ const serviceController = {
         try {
             const id = req.params.id;
 
-            const { title, description, tamanho, category, novo, launch, kit, sexo, valor } = req.body;
+            const { title, description, tamanho, category, novo, launch, kit, modelo, tipo, valor } = req.body;
             const image_path = req.file ? req.file.path : ''; // Caminho da imagem, se enviada
 
             // Verifica a presença dos campos obrigatórios
-            if (!title || !description || !tamanho || !category || !novo || !launch || !kit || !sexo || !valor) {
+            if (!title || !description || !tamanho || !category || !novo || !launch || !kit || !modelo || !tipo || !valor) {
                 return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
             }
 
@@ -100,7 +101,8 @@ const serviceController = {
                 novo,
                 launch,
                 kit,
-                sexo,
+                modelo,
+                tipo,
                 valor
             };
 

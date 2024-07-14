@@ -20,5 +20,5 @@ const routes = require('./routes/router')
 app.use('/api', routes)
 
 app.listen(port, function() {
-    console.log(`Servidor Online! localhost:${port}/api/services`);
+    console.log(`Servidor Online! http://localhost:${port}/api/services`);
 });

@@ -9,7 +9,8 @@ const RoupasSchema = new mongoose.Schema({
     novo: { type: String, required: true }, // Alterado para "novo"
     launch: { type: String, required: true },
     kit: { type: String, required: true },
-    sexo: { type: String, required: true },
+    modelo: { type: String, required: true },
+    tipo: { type: String, required: true },
     valor: { type: String, required: true }, // Corrigido para tipo Number
     createdAt: { type: Date, default: Date.now }, // Campo para registrar a data de criação
     updatedAt: { type: Date, default: Date.now } // Campo para registrar a data de última edição
