@@ -12,6 +12,7 @@ app.use(express.json());
 // DB Connection
 const conn = require('./db/conn');
 
+//test
 conn();
 
 // Routes
